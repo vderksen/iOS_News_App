@@ -1,24 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
+                <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="CBC_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q6h-xz-BmY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="jyu-pv-Ns6">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="1" green="0.2522321663" blue="0.19761315400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <items>
+                                <navigationItem id="4CZ-0a-JVW"/>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="230" id="o86-yC-PPj" customClass="TableViewCell" customModule="CBC_News" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="230"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o86-yC-PPj" id="Jg0-jA-3g0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="669-4W-OGe">
+                                            <rect key="frame" x="10" y="161" width="394" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4SF-9y-GhA">
+                                            <rect key="frame" x="30" y="16" width="354" height="118"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlU-s1-bwV">
+                                            <rect key="frame" x="30" y="183.5" width="354" height="35.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4SF-9y-GhA" secondAttribute="bottom" constant="45.5" id="1wp-F4-KdI">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="80"/>
+                                            <variation key="heightClass=regular-widthClass=compact" constant="85"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                                        </constraint>
+                                        <constraint firstItem="4SF-9y-GhA" firstAttribute="leading" secondItem="Jg0-jA-3g0" secondAttribute="leadingMargin" constant="10" id="3Lw-jB-3GB">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                        </constraint>
+                                        <constraint firstItem="4SF-9y-GhA" firstAttribute="top" secondItem="Jg0-jA-3g0" secondAttribute="topMargin" constant="10" id="AJY-N2-TSo">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="5"/>
+                                            <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                        </constraint>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4SF-9y-GhA" secondAttribute="trailing" constant="10" id="AKD-cX-n2B">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                        </constraint>
+                                        <constraint firstItem="vlU-s1-bwV" firstAttribute="leading" secondItem="Jg0-jA-3g0" secondAttribute="leadingMargin" constant="10" id="AM0-6k-7fu">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                        </constraint>
+                                        <constraint firstItem="669-4W-OGe" firstAttribute="leading" secondItem="Jg0-jA-3g0" secondAttribute="leading" constant="10" id="Cbm-gq-O7X">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                        </constraint>
+                                        <constraint firstItem="vlU-s1-bwV" firstAttribute="top" secondItem="669-4W-OGe" secondAttribute="bottomMargin" constant="10" id="Crk-Jt-7Bg">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="5"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                                        </constraint>
+                                        <constraint firstAttribute="trailing" secondItem="669-4W-OGe" secondAttribute="trailing" constant="10" id="G4P-y0-uR1">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="550"/>
+                                        </constraint>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vlU-s1-bwV" secondAttribute="trailing" constant="10" id="Yjh-1U-sUK">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="550"/>
+                                        </constraint>
+                                        <constraint firstItem="669-4W-OGe" firstAttribute="top" secondItem="Jg0-jA-3g0" secondAttribute="topMargin" constant="10" id="ifd-fU-XIf">
+                                            <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                                            <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                                        </constraint>
+                                        <constraint firstItem="vlU-s1-bwV" firstAttribute="bottom" secondItem="Jg0-jA-3g0" secondAttribute="bottomMargin" id="jgU-T9-Dyp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coverImg" destination="4SF-9y-GhA" id="0Vz-w4-xBE"/>
+                                    <outlet property="lblPublishDate" destination="vlU-s1-bwV" id="8LI-lz-gVg"/>
+                                    <outlet property="lblTitle" destination="669-4W-OGe" id="qH5-MC-F4Z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="shH-M9-IiW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="69.642857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
